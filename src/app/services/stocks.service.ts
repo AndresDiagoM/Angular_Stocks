@@ -32,6 +32,6 @@ export class StocksService {
     if (symbols) {
       return this.http.get<Array<StockInterface>>(service + '/stocks/snapshot ? symbols = ' + symbols.join());
     }
-    return null;
+    return null; //to avoid error
   }
 }
